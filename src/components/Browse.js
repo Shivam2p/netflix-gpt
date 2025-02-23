@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import Header from './Header'
+import useNowPlaingMovies from '../hooks/useNowPlaingMovies'
+import MainContainer from './MainContainer';
+import SecondaryContainer from './SecondaryContainer';
+
 
 const Browse = () => {
+           useNowPlaingMovies();
   return (
-    <div>B
-        <h1>helo</h1>
+    <div>
+      <Header/>
+      <MainContainer/>
+      <SecondaryContainer/>
     </div>
   )
 }

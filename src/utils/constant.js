@@ -10,7 +10,7 @@ export const Api_options = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer'+process.env.REACT_APP_TMDB_KEY
+      Authorization: 'Bearer '+process.env.REACT_APP_TMDB_KEY
     }};
 
   export const SupportedLanguage=[{identifier:"en",name:"English"},{identifier:"hindi",name:"Hindi"},{identifier:"spanish",name:"Spanish"},];

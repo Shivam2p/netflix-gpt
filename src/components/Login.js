@@ -75,27 +75,28 @@ const Login = () => {
     }
   return (
     <div>
-        <Header/>
-        <div className='absolute bg-black'>
-        <img src={bgImg} alt='bg-img'/>
-        </div> 
-        <form onSubmit={(e)=>e.preventDefault()} className='absolute w-3/12 p-12 bg-black my-36 mx-auto left-0 right-0 text-white rounded-lg bg-opacity-85'>
-        <h1 className='font-bold  text-3xl py-4'>{issignin?"Sign In":"Sign Up"}</h1>
-        {  !issignin&&(
-            <>
-                <input ref={name} type='text' placeholder='FullName' className='p-4 my-4 w-full bg-gray-700'/>
-                <input type='tel' placeholder='Phone Number' className='p-4 my-4 w-full bg-gray-700'/>
-                </>
-            ) }
-            <input  ref={email} type='email' placeholder='email address' className='p-4 my-4 w-full bg-gray-700'/>
-            <input ref={password} type='password' placeholder='enter password' className='p-4 my-4 w-full bg-gray-700'/>
-            <p className='text-red-500'>{errormsg}</p>
-            <button onClick={handlebtnclick} className='p-4 my-6 w-full bg-red-600 rounded-lg'>{issignin?"Sign In":"Sign Up"}</button>
-            <p  className='py-4 cursor-pointer' onClick={ToggleSignform}>
-                {issignin?"New to Netflix ? Sign Up Now":"Already Registred ? Sign In Now"}
-            </p>
-        </form>
-    </div>
+    <Header/>
+    <div className='absolute bg-black'>
+    <img  className='h-screen object-cover w-screen   md:w-auto md:h-auto' src={bgImg} alt='bg-img'/>
+    </div> 
+    <form onSubmit={(e)=>e.preventDefault()} className='absolute w-full md:w-3/12 p-12 bg-black my-36 mx-auto left-0 right-0 text-white rounded-lg bg-opacity-85'>
+    <h1 className='font-bold  text-3xl py-4'>{issignin?"Sign In":"Sign Up"}</h1>
+    {  !issignin&&(
+        <>
+            <input ref={name} type='text' placeholder='FullName' className='p-4 my-4 w-full bg-gray-700'/>
+            <input type='tel' placeholder='Phone Number' className='p-4 my-4 w-full bg-gray-700'/>
+            </>
+        ) }
+        <input  ref={email} type='email' placeholder='email address' className='p-4 my-4 w-full bg-gray-700'/>
+        <input ref={password} type='password' placeholder='enter password' className='p-4 my-4 w-full bg-gray-700'/>
+        <p className='text-red-500'>{errormsg}</p>
+        <button onClick={handlebtnclick} className='p-4 my-6 w-full bg-red-600 rounded-lg'>{issignin?"Sign In":"Sign Up"}</button>
+        <p  className='py-4 cursor-pointer' onClick={ToggleSignform}>
+            {issignin?"New to Netflix ? Sign Up Now":"Already Registred ? Sign In Now"}
+        </p>
+    </form>
+</div> 
+  
   )
 }
 

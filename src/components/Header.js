@@ -60,21 +60,52 @@ const Header = () => {
     dispatch(changeLang(e.target.value))
   }
   return (
-    <div className=' w-screen absolute px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between'>
-        <img  className='w-44' src={Logo} alt='logo'/>
-
-  { user&&<div className='flex p-4 backdrop-blur-sm'>
-    
-     {showgptlang&& <select className='p-2 bg-gray-900 rounded-lg  text-white m-2' onChange={handelLanguageChange}>
-        {SupportedLanguage.map((lang)=><option  className=' bg-gray-900 rounded-lg' value={lang.identifier} key={lang.identifier}>{lang.name }</option>)}
-      </select>}
-      
+    <div className="w-screen absolute px-6 py-3 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row items-center md:justify-between">
    
-    <button className='py-2 px-4 mx-4 bg-purple-800 rounded-lg  font-bold ' onClick={handleGptSearch}> {showgptlang?"Home page":"Gpt_Search"}</button>
-  <img className='w-12 h-12 rounded-md' src={user?.photoURL} alt='usericon'/>
-  <button onClick={handleSignout} className='bg-purple-800 rounded-lg py-2 px-4 mx-4 font-bold' >Signout</button>
-  </div>}
-    </div>
+    <img className="w-36 md:w-44 mx-auto md:mx-0" src={Logo} alt="logo" />
+  
+    {user && (
+      <div className="flex flex-col md:flex-row items-center p-4 backdrop-blur-sm space-y-3 md:space-y-0 md:space-x-4">
+       
+        {showgptlang && (
+          <select
+            className="p-2 bg-gray-900 text-white rounded-lg m-2 md:m-0 w-full md:w-auto"
+            onChange={handelLanguageChange}
+          >
+            {SupportedLanguage.map((lang) => (
+              <option
+                className="bg-gray-900 rounded-lg"
+                value={lang.identifier}
+                key={lang.identifier}
+              >
+                {lang.name}
+              </option>
+            ))}
+          </select>
+        )}
+  
+  
+        <button
+          className="py-2 px-4 bg-purple-800 text-white font-bold rounded-lg hover:bg-purple-700 transition"
+          onClick={handleGptSearch}
+        >
+          {showgptlang ? "Home Page" : "GPT Search"}
+        </button>
+  
+    
+        <img className="w-10 h-10 md:w-12 md:h-12 rounded-md" src={user?.photoURL} alt="usericon" />
+  
+      
+        <button
+          onClick={handleSignout}
+          className="py-2 px-4 bg-purple-800 text-white font-bold rounded-lg hover:bg-purple-700 transition"
+        >
+          Sign Out
+        </button>
+      </div>
+    )}
+  </div>
+  
   )
 }
 

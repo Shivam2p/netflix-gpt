@@ -4,9 +4,10 @@ import useGetMovieVedio from '../hooks/useGetMovieVedio';
 
 
 const VideoBackground = ({ id }) => {
+    useGetMovieVedio(id);
     const trailerVedio=useSelector(store=>store.movies?.trailorVedio)
   
-  useGetMovieVedio(id);
+ 
   return (
         <div className="w-full h-screen absolute top-0 left-0 -z-10 ">
             {trailerVedio?.key ? (

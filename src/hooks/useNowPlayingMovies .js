@@ -5,7 +5,7 @@ import { Api_options } from "../utils/constant";
 
  
  
- const useNowPlaingMovies=()=>{
+ const useNowPlayingMovies=()=>{
     const dispatch=useDispatch()
     const  getNowPlayingMovies= async()=>{
       const data= await fetch('https://api.themoviedb.org/3/movie/now_playing?page=1', Api_options);
@@ -17,4 +17,4 @@ import { Api_options } from "../utils/constant";
       getNowPlayingMovies()
     },[])
  }
- export default useNowPlaingMovies;
+ export default useNowPlayingMovies;

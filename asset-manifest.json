@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Shivam2p/netflix-gpt/static/css/main.e9e68e1a.css",
+    "main.js": "/Shivam2p/netflix-gpt/static/js/main.5e3e53b5.js",
+    "static/js/488.7d20b25e.chunk.js": "/Shivam2p/netflix-gpt/static/js/488.7d20b25e.chunk.js",
+    "index.html": "/Shivam2p/netflix-gpt/index.html",
+    "main.e9e68e1a.css.map": "/Shivam2p/netflix-gpt/static/css/main.e9e68e1a.css.map",
+    "main.5e3e53b5.js.map": "/Shivam2p/netflix-gpt/static/js/main.5e3e53b5.js.map",
+    "488.7d20b25e.chunk.js.map": "/Shivam2p/netflix-gpt/static/js/488.7d20b25e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e9e68e1a.css",
+    "static/js/main.5e3e53b5.js"
+  ]
+}
